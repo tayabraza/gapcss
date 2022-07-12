@@ -1,0 +1,275 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.box {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.box-full {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.linear:before, .linear:after {
+  display: table;
+  content: " ";
+}
+
+.linear:after {
+  clear: both;
+}
+
+.box-1 {
+  float: left;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid green;
+}
+
+.box-skip-1 {
+  margin-left: 100%;
+}
+
+.box-2 {
+  float: left;
+  width: 100%;
+  max-width: 50%;
+  border: 1px solid green;
+}
+
+.box-skip-2 {
+  margin-left: 50%;
+}
+
+.box-3 {
+  float: left;
+  width: 100%;
+  max-width: 33.33333%;
+  border: 1px solid green;
+}
+
+.box-skip-3 {
+  margin-left: 33.33333%;
+}
+
+.box-4 {
+  float: left;
+  width: 100%;
+  max-width: 25%;
+  border: 1px solid green;
+}
+
+.box-skip-4 {
+  margin-left: 25%;
+}
+
+.box-5 {
+  float: left;
+  width: 100%;
+  max-width: 20%;
+  border: 1px solid green;
+}
+
+.box-skip-5 {
+  margin-left: 20%;
+}
+
+.box-6 {
+  float: left;
+  width: 100%;
+  max-width: 16.66667%;
+  border: 1px solid green;
+}
+
+.box-skip-6 {
+  margin-left: 16.66667%;
+}
+
+.box-7 {
+  float: left;
+  width: 100%;
+  max-width: 14.28571%;
+  border: 1px solid green;
+}
+
+.box-skip-7 {
+  margin-left: 14.28571%;
+}
+
+.box-8 {
+  float: left;
+  width: 100%;
+  max-width: 12.5%;
+  border: 1px solid green;
+}
+
+.box-skip-8 {
+  margin-left: 12.5%;
+}
+
+@media screen and (min-width: 600px) {
+  .box-t-1, .box-tablet-1 {
+    max-width: 100%;
+  }
+  .box-skip-t-1, .box-skip-tablet-1 {
+    margin-left: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .box-d-1, .box-desktop-1 {
+    max-width: 100%;
+  }
+  .box-skip-d-1, .box-skip-desktop-1 {
+    margin-left: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .box-t-2, .box-tablet-2 {
+    max-width: 50%;
+  }
+  .box-skip-t-2, .box-skip-tablet-2 {
+    margin-left: 50%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .box-d-2, .box-desktop-2 {
+    max-width: 50%;
+  }
+  .box-skip-d-2, .box-skip-desktop-2 {
+    margin-left: 50%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .box-t-3, .box-tablet-3 {
+    max-width: 33.33333%;
+  }
+  .box-skip-t-3, .box-skip-tablet-3 {
+    margin-left: 33.33333%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .box-d-3, .box-desktop-3 {
+    max-width: 33.33333%;
+  }
+  .box-skip-d-3, .box-skip-desktop-3 {
+    margin-left: 33.33333%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .box-t-4, .box-tablet-4 {
+    max-width: 25%;
+  }
+  .box-skip-t-4, .box-skip-tablet-4 {
+    margin-left: 25%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .box-d-4, .box-desktop-4 {
+    max-width: 25%;
+  }
+  .box-skip-d-4, .box-skip-desktop-4 {
+    margin-left: 25%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .box-t-5, .box-tablet-5 {
+    max-width: 20%;
+  }
+  .box-skip-t-5, .box-skip-tablet-5 {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .box-d-5, .box-desktop-5 {
+    max-width: 20%;
+  }
+  .box-skip-d-5, .box-skip-desktop-5 {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .box-t-6, .box-tablet-6 {
+    max-width: 16.66667%;
+  }
+  .box-skip-t-6, .box-skip-tablet-6 {
+    margin-left: 16.66667%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .box-d-6, .box-desktop-6 {
+    max-width: 16.66667%;
+  }
+  .box-skip-d-6, .box-skip-desktop-6 {
+    margin-left: 16.66667%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .box-t-7, .box-tablet-7 {
+    max-width: 14.28571%;
+  }
+  .box-skip-t-7, .box-skip-tablet-7 {
+    margin-left: 14.28571%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .box-d-7, .box-desktop-7 {
+    max-width: 14.28571%;
+  }
+  .box-skip-d-7, .box-skip-desktop-7 {
+    margin-left: 14.28571%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .box-t-8, .box-tablet-8 {
+    max-width: 12.5%;
+  }
+  .box-skip-t-8, .box-skip-tablet-8 {
+    margin-left: 12.5%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .box-d-8, .box-desktop-8 {
+    max-width: 12.5%;
+  }
+  .box-skip-d-8, .box-skip-desktop-8 {
+    margin-left: 12.5%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

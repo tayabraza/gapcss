@@ -1,0 +1,65 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+.box{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+.box-full{
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+.linear:before, .linear:after {
+    display: table;
+    content: " ";
+}
+.linear:after {
+    clear: both;
+}
+
+@for $i from 1 through 8 {
+    .box-#{$i} {
+        float: left;
+        width: 100%;
+        max-width: 100% / $i;
+        border: 1px solid green;
+    }
+    .box-skip-#{$i} {
+        margin-left: 100% / $i;
+    }
+}
+
+@for $i from 1 through 8 {
+    @media screen and (min-width: 600px) {
+        .box-t-#{$i}, .box-tablet-#{$i}  {
+            max-width: 100% / $i;
+        }
+        .box-skip-t-#{$i}, .box-skip-tablet-#{$i} {
+            margin-left: 100% / $i;
+        }
+    }
+    @media screen and (min-width: 900px) {
+        .box-d-#{$i}, .box-desktop-#{$i} {
+            max-width: 100% / $i;
+        }
+        .box-skip-d-#{$i}, .box-skip-desktop-#{$i} {
+            margin-left: 100% / $i;
+        }
+    }
+}
