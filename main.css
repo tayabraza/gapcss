@@ -9,6 +9,7 @@
 
 html, body {
   height: 100%;
+  font-size: 16px;
 }
 
 img, picture, video, canvas, svg {
@@ -41,11 +42,98 @@ p, h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
+.navbar ul > li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+}
+
+.center-box, .center-btn, .center-img {
+  display: block;
+  margin: auto;
+}
+
+.center-text {
+  display: block;
+  text-align: center;
+}
+
+.popup, .popup-t, .popup-tablet, .popup-d, .popup-desktop {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  width: 95%;
+  max-width: 480px;
+  padding: 30px 15px;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+.popup:target, .popup-t:target:target, .popup-tablet:target, .popup-d:target, .popup-desktop:target {
+  display: block;
+}
+
+.popup .close, .popup-t .close, .popup-tablet .close, .popup-d .close, .popup-desktop .close {
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+/* unvisited link */
+a.no-decoration:link {
+  color: inherit;
+}
+
+/* visited link */
+a.no-decoration:visited {
+  color: inherit;
+}
+
+/* mouse over link */
+a.no-decoration:hover {
+  color: inherit;
+}
+
+/* selected link */
+a.no-decoration:active {
+  color: inherit;
+}
+
+@media screen and (min-width: 600px) {
+  .popup-t, .popup-tablet {
+    max-width: 780px;
+  }
+  .popup-d, .popup-desktop {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .popup-d, .popup-desktop {
+    max-width: 1080px;
+  }
+}
+
 .box-1 {
   float: left;
   width: 100%;
   max-width: 100%;
-  border: 1px solid green;
 }
 
 .box-skip-1 {
@@ -56,7 +144,6 @@ p, h1, h2, h3, h4, h5, h6 {
   float: left;
   width: 100%;
   max-width: 50%;
-  border: 1px solid green;
 }
 
 .box-skip-2 {
@@ -67,7 +154,6 @@ p, h1, h2, h3, h4, h5, h6 {
   float: left;
   width: 100%;
   max-width: 33.33333%;
-  border: 1px solid green;
 }
 
 .box-skip-3 {
@@ -78,7 +164,6 @@ p, h1, h2, h3, h4, h5, h6 {
   float: left;
   width: 100%;
   max-width: 25%;
-  border: 1px solid green;
 }
 
 .box-skip-4 {
@@ -89,7 +174,6 @@ p, h1, h2, h3, h4, h5, h6 {
   float: left;
   width: 100%;
   max-width: 20%;
-  border: 1px solid green;
 }
 
 .box-skip-5 {
@@ -100,7 +184,6 @@ p, h1, h2, h3, h4, h5, h6 {
   float: left;
   width: 100%;
   max-width: 16.66667%;
-  border: 1px solid green;
 }
 
 .box-skip-6 {
@@ -111,7 +194,6 @@ p, h1, h2, h3, h4, h5, h6 {
   float: left;
   width: 100%;
   max-width: 14.28571%;
-  border: 1px solid green;
 }
 
 .box-skip-7 {
@@ -122,7 +204,6 @@ p, h1, h2, h3, h4, h5, h6 {
   float: left;
   width: 100%;
   max-width: 12.5%;
-  border: 1px solid green;
 }
 
 .box-skip-8 {

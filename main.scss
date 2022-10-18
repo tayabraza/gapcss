@@ -1,3 +1,138 @@
-@import "base";
-@import "components";
-@import "layout";
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+    font-size: 16px;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+.box{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+.box-full{
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+.linear:before, .linear:after {
+    display: table;
+    content: " ";
+}
+.linear:after {
+    clear: both;
+}
+.navbar ul > li {
+    display: inline-block;
+    padding: 10px;
+
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+}
+.center-box, .center-btn, .center-img{
+    display: block;
+    margin: auto;
+}
+.center-text{
+    display: block;
+    text-align: center;
+}
+.popup, .popup-t, .popup-tablet, .popup-d, .popup-desktop{
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 95%;
+    max-width: 480px;
+    padding: 30px 15px;
+    background: #ffffff;
+    border-radius: 5px;
+}
+.popup:target, .popup-t:target:target, .popup-tablet:target, .popup-d:target, .popup-desktop:target{
+    display: block;
+}
+.popup .close, .popup-t .close, .popup-tablet .close, .popup-d .close, .popup-desktop .close {
+    position: absolute;
+    top: 0px;
+    right: 8px;
+    font-size: 30px;
+    text-decoration: none;
+}
+.no-decoration{
+    text-decoration: none;
+}
+/* unvisited link */
+a.no-decoration:link{
+    color: inherit;
+}
+/* visited link */
+a.no-decoration:visited {
+    color: inherit;
+}
+/* mouse over link */
+a.no-decoration:hover {
+    color: inherit;
+}
+/* selected link */
+a.no-decoration:active {
+    color: inherit;
+}
+
+@media screen and (min-width: 600px) {
+    .popup-t, .popup-tablet{
+        max-width: 780px;
+    }
+    .popup-d, .popup-desktop{
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 900px) {
+    .popup-d, .popup-desktop{
+        max-width: 1080px;
+    }
+}
+
+@for $i from 1 through 8 {
+    .box-#{$i} {
+        float: left;
+        width: 100%;
+        max-width: 100% / $i;
+    }
+    .box-skip-#{$i} {
+        margin-left: 100% / $i;
+    }
+}
+@for $i from 1 through 8 {
+    @media screen and (min-width: 600px) {
+        .box-t-#{$i}, .box-tablet-#{$i}  {
+            max-width: 100% / $i;
+        }
+        .box-skip-t-#{$i}, .box-skip-tablet-#{$i} {
+            margin-left: 100% / $i;
+        }
+    }
+    @media screen and (min-width: 900px) {
+        .box-d-#{$i}, .box-desktop-#{$i} {
+            max-width: 100% / $i;
+        }
+        .box-skip-d-#{$i}, .box-skip-desktop-#{$i} {
+            margin-left: 100% / $i;
+        }
+    }
+}
