@@ -42,7 +42,7 @@ p, h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
-.navbar ul > li {
+.menu ul > li {
   display: inline-block;
   padding: 10px;
 }
