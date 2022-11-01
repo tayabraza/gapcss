@@ -10,23 +10,26 @@
 <body>
     <header>
         <div class="box">
-            <nav class="menu">
-                <a href="#menu"></a>
-                <ul>
+            <nav class="navbar">
+                <label class="hamburger" for="navbar-toggle"></label>
+                <input type="checkbox" id="navbar-toggle">
+                <ul class="menu">
                     <li>
-                        First
+                        <a href="#home">Home</a>
                     </li>
                     <li>
-                        Second
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Services </a>
+                        <ul>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Devlopment</a></li>
+                            <li><a href="#">Deployment</a></li>
+                        </ul>        
                     </li>
                     <li>
-                        Third
-                    </li>
-                    <li>
-                        Fourth
-                    </li>
-                    <li>
-                        Fifth
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -36,7 +39,7 @@
 
         <div class="box">
             <div class="linear">
-                <div class="box-3 box-t-1 box-skip-d-6 box-d-6" style="background-color: #ccc;">
+                <div class="box-3 box-t-1 box-d-6" style="background-color: #ccc;">
                     <h1>Box</h1>
                     <img src="https://www.w3schools.com/bootstrap5/cinqueterre.jpg" alt="" class="center-img">
                 </div>
