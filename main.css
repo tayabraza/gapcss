@@ -12,6 +12,13 @@ html,
 body {
   height: 100%;
   font-size: 16px;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+body.dark {
+  background-color: #00040c;
+  color: #ffffff;
 }
 
 img,
@@ -55,21 +62,23 @@ h6 {
   clear: both;
 }
 
-.navbar,
-.navbar-t,
-.navbar-tablet,
-.navbar-d,
-.navbar-desktop {
+.menu,
+.menu-t,
+.menu-tablet,
+.menu-d,
+.menu-desktop {
   position: relative;
+  background-color: #ffffff;
   padding: 10px 0px;
 }
 
 .hamburger {
   display: block;
-  border-bottom: 12px double black;
-  border-top: 4px solid black;
   height: 20px;
   width: 30px;
+  margin: 0px 10px 0px 10px;
+  border-bottom: 12px double #333333;
+  border-top: 4px solid #333333;
   text-decoration: none;
   cursor: pointer;
 }
@@ -82,20 +91,21 @@ h6 {
   opacity: 0;
 }
 
-.hamburger + input:checked + .menu {
+.hamburger + input:checked + .navbar > ul {
   display: block;
 }
 
-.navbar .menu > li,
-.navbar-t .menu > li,
-.navbar-tablet .menu > li,
-.navbar-d .menu > li,
-.navbar-desktop .menu > li {
+.menu .navbar > ul > li,
+.menu-t .navbar > ul > li,
+.menu-tablet .navbar > ul > li,
+.menu-d .navbar > ul > li,
+.menu-desktop .navbar > ul > li {
   display: block;
-  padding: 10px 0px;
+  padding: 5px 0px;
+  background-color: #ffffff;
 }
 
-.menu {
+.navbar > ul {
   display: none;
   position: absolute;
   width: 100%;
@@ -103,55 +113,61 @@ h6 {
   background-color: #ffffff;
 }
 
-.menu a {
+.navbar > ul a {
+  display: block;
+  padding: 10px;
   text-decoration: none;
-  font-size: 18px;
   font-weight: bold;
+  color: #333333;
 }
 
-.menu > .dropdown {
-  position: relative;
+.navbar > ul li:hover {
+  background-color: #cccccc;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-.menu > .dropdown::after {
+.navbar > ul > .dropdown {
+  position: relative;
+}
+
+.navbar > ul > .dropdown::after {
   content: "";
   position: absolute;
-  top: 40%;
-  left: 90%;
-  border-top: 8px solid #000000;
+  top: 43%;
+  left: 86%;
+  border-top: 8px solid #333333;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
 
-.menu > .dropdown > ul {
+.navbar > ul > .dropdown:hover::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 86%;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-bottom: 8px solid #333333;
+}
+
+.navbar > ul > .dropdown > ul {
   display: none;
   position: absolute;
-  padding: 10px;
+  left: 0px;
+  margin-top: 5px;
+  padding: 0px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
   background-color: #ffffff;
 }
 
-.menu > .dropdown:hover > ul {
+.navbar > ul > .dropdown:hover > ul {
   display: block;
 }
 
-.menu > .dropdown:hover::after {
-  content: "";
-  position: absolute;
-  top: 25%;
-  left: 90%;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-  border-bottom: 8px solid #000000;
-}
-
-.menu > .dropdown:focus-within > ul {
+.navbar > ul > .dropdown > ul > li {
   display: block;
-}
-
-.menu > .dropdown > ul > li {
-  display: block;
-  padding: 10px 0px;
 }
 
 .btn {
@@ -160,6 +176,7 @@ h6 {
   border-radius: 5px;
   border: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .center-box,
@@ -207,6 +224,7 @@ h6 {
   max-width: 480px;
   padding: 30px 15px;
   background-color: #ffffff;
+  border: 2px solid #cccccc;
   border-radius: 5px;
 }
 
@@ -254,21 +272,17 @@ a.no-decoration:active {
   color: inherit;
 }
 
-.dark {
-  background-color: #000000 !important;
-}
-
 @media screen and (min-width: 600px) {
-  .navbar .hamburger {
+  .menu .hamburger {
     display: none;
   }
-  .navbar .menu {
+  .menu .navbar > ul {
     display: block;
     position: static;
   }
-  .navbar .menu > li {
+  .menu .navbar > ul > li {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 5px;
   }
   .popup-t,
 .popup-tablet {
@@ -280,16 +294,19 @@ a.no-decoration:active {
   }
 }
 @media screen and (min-width: 900px) {
-  .navbar-t .hamburger {
+  .menu-t .hamburger,
+.menu-tablet .hamburger {
     display: none;
   }
-  .navbar-t .menu {
+  .menu-t .navbar > ul,
+.menu-tablet .navbar > ul {
     display: block;
     position: static;
   }
-  .navbar-t .menu > li {
+  .menu-t .navbar > ul > li,
+.menu-tablet .navbar > ul > li {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 5px;
   }
   .popup-d,
 .popup-desktop {

@@ -1,3 +1,11 @@
+$white: #ffffff;
+$black: #000000;
+$dark: #00040c;
+$dark-gray: #333333;
+$gray: #cccccc;
+
+
+
 *,
 *::before,
 *::after {
@@ -10,6 +18,12 @@ html,
 body {
   height: 100%;
   font-size: 16px;
+  background-color: $white;
+  color: $dark-gray;
+}
+body.dark{
+  background-color: #00040c;
+  color: $white;
 }
 img,
 picture,
@@ -46,20 +60,22 @@ h6 {
 .linear:after {
   clear: both;
 }
-.navbar,
-.navbar-t,
-.navbar-tablet,
-.navbar-d,
-.navbar-desktop {
+.menu,
+.menu-t,
+.menu-tablet,
+.menu-d,
+.menu-desktop {
   position: relative;
+  background-color: $white;
   padding: 10px 0px;
 }
 .hamburger {
   display: block;
-  border-bottom: 12px double black;
-  border-top: 4px solid black;
   height: 20px;
   width: 30px;
+  margin: 0px 10px 0px 10px;
+  border-bottom: 12px double $dark-gray;
+  border-top: 4px solid $dark-gray;
   text-decoration: none;
   cursor: pointer;
 }
@@ -70,66 +86,76 @@ h6 {
   height: 0px;
   opacity: 0;
 }
-.hamburger + input:checked + .menu {
+.hamburger + input:checked + .navbar > ul {
   display: block;
 }
-.navbar .menu > li,
-.navbar-t .menu > li,
-.navbar-tablet .menu > li,
-.navbar-d .menu > li,
-.navbar-desktop .menu > li {
+.menu .navbar > ul > li,
+.menu-t .navbar > ul > li,
+.menu-tablet .navbar > ul > li,
+.menu-d .navbar > ul > li,
+.menu-desktop .navbar > ul > li {
   display: block;
-  padding: 10px 0px;
+  padding: 5px 0px;
+  background-color: $white;
 }
-.menu {
+.navbar > ul {
   display: none;
   position: absolute;
   width: 100%;
   padding: 0px;
-  background-color: #ffffff;
+  background-color: $white;
 }
-.menu a {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
+.navbar > ul a {
+  display: block;
+  padding: 10px; 
+  text-decoration: none;
+  font-weight: bold;
+  color: $dark-gray;
 }
-.menu > .dropdown {
-    position: relative;
-    cursor: pointer;
+.navbar > ul li:hover {
+  background-color: $gray;
+  border-radius: 4px;
+  cursor: pointer;
 }
-.menu > .dropdown::after{
-    content: '';
-    position: absolute;
-    top: 40%;
-    left: 90%;
-    border-top: 8px solid #000000;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
+.navbar > ul > .dropdown {
+  position: relative;
 }
-.menu > .dropdown > ul{
-    display: none;
-    position: absolute;
-    padding: 10px;
-    background-color: #ffffff;
+.navbar > ul > .dropdown::after{
+  content: '';
+  position: absolute;
+  top: 43%;
+  left: 86%;
+  border-top: 8px solid $dark-gray;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
 }
-.menu > .dropdown:hover > ul{
-    display: block;
+.navbar > ul > .dropdown:hover::after{
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 86%;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-bottom: 8px solid $dark-gray;
 }
-.menu > .dropdown:hover::after{
-    content: '';
-    position: absolute;
-    top: 25%;
-    left: 90%;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
-    border-bottom: 8px solid #000000;
+.navbar > ul > .dropdown > ul{
+  display: none;
+  position: absolute;
+  left: 0px;
+  margin-top: 5px;
+  padding: 0px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: $white;
 }
-.menu > .dropdown:focus-within > ul{
-    display: block;
+.navbar > ul > .dropdown:hover > ul{
+  display: block;
 }
-.menu > .dropdown > ul > li{
-    display: block;
-    padding: 10px 0px;
+// .navbar > ul > .dropdown:focus-within > ul {
+//   display: block;
+// }
+.navbar > ul > .dropdown > ul > li {
+  display: block;
 }
 .btn {
   display: inline-block;
@@ -137,6 +163,7 @@ h6 {
   border-radius: 5px;
   border: none;
   text-decoration: none;
+  cursor: pointer;
 }
 .center-box,
 .center-btn,
@@ -175,7 +202,8 @@ h6 {
   width: 95%;
   max-width: 480px;
   padding: 30px 15px;
-  background-color: #ffffff;
+  background-color: $white;
+  border: 2px solid $gray;
   border-radius: 5px;
 }
 .popup:target,
@@ -215,20 +243,17 @@ a.no-decoration:hover {
 a.no-decoration:active {
   color: inherit;
 }
-.dark {
-  background-color: #000000 !important;
-}
 @media screen and (min-width: 600px) {
-  .navbar .hamburger{
+  .menu .hamburger{
     display: none;
   }
-  .navbar .menu {
+  .menu .navbar > ul {
     display: block;
     position: static;
   }
-  .navbar .menu > li {
+  .menu .navbar > ul > li {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 5px;
   }
   .popup-t,
   .popup-tablet {
@@ -240,16 +265,19 @@ a.no-decoration:active {
   }
 }
 @media screen and (min-width: 900px) {
-  .navbar-t .hamburger{
+  .menu-t .hamburger, 
+  .menu-tablet .hamburger{
     display: none;
   }
-  .navbar-t .menu {
+  .menu-t .navbar > ul, 
+  .menu-tablet .navbar > ul {
     display: block;
     position: static;
   }
-  .navbar-t .menu > li {
+  .menu-t .navbar > ul > li, 
+  .menu-tablet .navbar > ul > li {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 5px;
   }
   .popup-d,
   .popup-desktop {
