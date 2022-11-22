@@ -1,0 +1,21 @@
+@media screen and (min-width: 600px) {
+	.menu .hamburger{
+		display: none;
+	}
+	.menu .navbar > ul {
+		display: block;
+		position: static;
+	}
+	.menu .navbar > ul > li {
+		display: inline-block;
+		padding: 5px;
+	}
+	.popup-t,
+	.popup-tablet {
+		max-width: 780px;
+	}
+	.popup-d,
+	.popup-desktop {
+		max-width: 100%;
+	}
+}

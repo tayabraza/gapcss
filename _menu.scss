@@ -1,0 +1,98 @@
+.menu,
+.menu-t,
+.menu-tablet,
+.menu-d,
+.menu-desktop {
+  position: relative;
+  background-color: $white;
+  padding: 10px 0px;
+}
+.hamburger {
+  display: block;
+  height: 20px;
+  width: 30px;
+  margin: 0px 10px 0px 10px;
+  border-bottom: 12px double $primary-text;
+  border-top: 4px solid $primary-text;
+  text-decoration: none;
+  cursor: pointer;
+}
+.hamburger + input {
+  display: none;
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+.hamburger + input:checked + .navbar > ul {
+  display: block;
+}
+.menu .navbar > ul > li,
+.menu-t .navbar > ul > li,
+.menu-tablet .navbar > ul > li,
+.menu-d .navbar > ul > li,
+.menu-desktop .navbar > ul > li {
+  display: block;
+  padding: 5px 0px;
+  background-color: $white;
+  border-radius: 4px;
+}
+.navbar > ul {
+  display: none;
+  position: absolute;
+  width: 100%;
+  padding: 0px;
+  background-color: $white;
+}
+.navbar > ul a {
+  display: block;
+  padding: 10px; 
+  text-decoration: none;
+  font-weight: bold;
+  color: $primary-text;
+}
+.navbar > ul li:hover {
+  background-color: $gray;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.navbar > ul > .dropdown {
+  position: relative;
+}
+.navbar > ul > .dropdown::after{
+  content: '';
+  position: absolute;
+  top: 43%;
+  left: 86%;
+  border-top: 8px solid $primary-text;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.navbar > ul > .dropdown:hover::after{
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 86%;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-bottom: 8px solid $primary-text;
+}
+.navbar > ul > .dropdown > ul{
+  display: none;
+  position: absolute;
+  left: 0px;
+  margin-top: 5px;
+  padding: 0px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: $white;
+}
+.navbar > ul > .dropdown:hover > ul{
+  display: block;
+}
+// .navbar > ul > .dropdown:focus-within > ul {
+//   display: block;
+// }
+.navbar > ul > .dropdown > ul > li {
+  display: block;
+}

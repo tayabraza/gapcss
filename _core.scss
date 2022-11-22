@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+.linear:before,
+.linear:after {
+  display: table;
+  content: " ";
+}
+.linear:after {
+  clear: both;
+}
+.no-decoration {
+  text-decoration: none;
+}
+a.no-decoration:link {
+  color: inherit;
+}
+a.no-decoration:visited {
+  color: inherit;
+}
+a.no-decoration:hover {
+  color: inherit;
+}
+a.no-decoration:active {
+  color: inherit;
+}

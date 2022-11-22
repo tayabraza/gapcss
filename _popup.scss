@@ -1,0 +1,35 @@
+.popup,
+.popup-t,
+.popup-tablet,
+.popup-d,
+.popup-desktop {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 95%;
+  max-width: 480px;
+  padding: 30px 15px;
+  background-color: $white;
+  border: 2px solid $gray;
+  border-radius: 5px;
+}
+.popup:target,
+.popup-t:target:target,
+.popup-tablet:target,
+.popup-d:target,
+.popup-desktop:target {
+  display: block;
+}
+.popup .close,
+.popup-t .close,
+.popup-tablet .close,
+.popup-d .close,
+.popup-desktop .close {
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  font-size: 30px;
+  text-decoration: none;
+}
