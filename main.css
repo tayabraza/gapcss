@@ -566,4 +566,23 @@ a.no-decoration:active {
     max-width: 1080px;
   }
 }
+
+body.dark {
+  background-color: #161c2c;
+  color: #ffffff;
+}
+
+body.dark .menu,
+body.dark .navbar > ul,
+body.dark .navbar > ul li,
+body.dark .navbar > ul li a {
+  background-color: #00040c;
+  color: #ffffff;
+}
+
+body.dark .navbar > ul li:hover,
+body.dark .navbar > ul li:hover > a {
+  background-color: #0082aa;
+  color: #ffffff;
+}
 /*# sourceMappingURL=main.css.map */
