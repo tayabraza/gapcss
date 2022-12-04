@@ -9,34 +9,12 @@
   margin: auto;
 }
 @for $i from 1 through 8 {
-    .box-#{$i} {
-      float: left;
-      width: 100%;
-      max-width: 100% / $i;
-    }
-    .box-skip-#{$i} {
-      margin-left: 100% / $i;
-    }
+  .box-#{$i} {
+    float: left;
+    width: 100%;
+    max-width: 100% / $i;
   }
-  @for $i from 1 through 8 {
-    @media screen and (min-width: 600px) {
-      .box-t-#{$i},
-      .box-tablet-#{$i} {
-        max-width: 100% / $i;
-      }
-      .box-skip-t-#{$i},
-      .box-skip-tablet-#{$i} {
-        margin-left: 100% / $i;
-      }
-    }
-    @media screen and (min-width: 900px) {
-      .box-d-#{$i},
-      .box-desktop-#{$i} {
-        max-width: 100% / $i;
-      }
-      .box-skip-d-#{$i},
-      .box-skip-desktop-#{$i} {
-        margin-left: 100% / $i;
-      }
-    }
+  .box-skip-#{$i} {
+    margin-left: 100% / $i;
   }
+}

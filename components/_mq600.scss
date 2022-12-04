@@ -1,3 +1,16 @@
+@for $i from 1 through 8 {
+	@media screen and (min-width: 600px) {
+		.box-t-#{$i},
+		.box-tablet-#{$i} {
+		max-width: 100% / $i;
+		}
+		.box-skip-t-#{$i},
+		.box-skip-tablet-#{$i} {
+		margin-left: 100% / $i;
+		}
+	}
+}
+
 @media screen and (min-width: 600px) {
 	.menu .hamburger{
 		display: none;

@@ -1,6 +1,12 @@
 .card{
-    width: 250px;
-    height: 350px;
-    border-radius: 15px;
-    box-shadow: 2px 2px 4px 2px $gray;
+  width: 15.625rem;
+  height: 21.875rem;
+  border-radius: $border-radius;
+  box-shadow: 2px 2px 4px 2px $gray;
+
+  &-landscape{
+    @extend .card;
+    width: 21.875rem;
+    height: 15.625rem;
+  }
 }
