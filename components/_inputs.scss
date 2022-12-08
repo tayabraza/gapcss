@@ -1,0 +1,11 @@
+.input-linear{
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: $border-radius;
+}
+.input-block{
+    @extend .input-linear;
+    display: block;
+    width: 100%;
+
+}
