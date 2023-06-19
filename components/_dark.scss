@@ -1,16 +1,16 @@
-body.dark{
+.dark{
   background-color: $dark-primary-bg;
   color: $white;
 }
-body.dark .menu,
-body.dark .navbar > ul,
-body.dark .navbar > ul li,
-body.dark .navbar > ul li a{
+.dark .menu,
+.dark .navbar > ul,
+.dark .navbar > ul li,
+.dark .navbar > ul li a{
   background-color: $black;
   color: $white;
 }
-body.dark .navbar > ul li:hover,
-body.dark .navbar > ul li:hover > a {
+.dark .navbar > ul li:hover,
+.dark .navbar > ul li:hover > a {
   background-color: $primary-bg;
   color: $white;
 }
