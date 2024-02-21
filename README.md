@@ -5,3 +5,5 @@
     <li>GapCSS has the built-in dark mode, and it is extremely easy to set up.</li>
     <li>GapCSS is compatible with all the modern browsers as well as the old browsers.</li>
 </ul>
+
+<p>If you would like to contribute to Gap CSS framework or you would like to give any kind of suggestion/feedback then please feel free to drop me an email at gapcssframework@gmail.com </p>
